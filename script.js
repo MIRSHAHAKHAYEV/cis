@@ -1,14 +1,5 @@
 // --- Şəhər və rayonlar ---
-const cities = [
-    { name: "Bakı", population: 2300000, coords: [40.409264, 49.867092] },
-    { name: "Gəncə", population: 335000, coords: [40.687859, 46.37233] },
-    { name: "Sumqayıt", population: 340000, coords: [40.589722, 49.668611] },
-    { name: "Mingəçevir", population: 105000, coords: [40.7699, 47.0489] },
-    { name: "Lənkəran", population: 52000, coords: [38.753611, 48.851111] },
-
-    // ✔ Bu formatda yeni əlavə edə bilərsən (coords YOXDUR ↓)
-    // { name: "Sabirabad", population: 110000 }
-];
+const cities = [];
 cities.push({
     name: "Sabirabad",
     population: 110000
