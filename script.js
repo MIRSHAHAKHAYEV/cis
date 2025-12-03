@@ -12,7 +12,10 @@ cities.push({
     name: "Gəncə",
     population: 335000
 });
-
+cities.push({
+    name: "Tovuz",
+    population: 10000
+});
 // --- Xəritə yaradılması ---
 const map = L.map("map").setView([40.3, 47.7], 7);
 
@@ -29,7 +32,7 @@ function getColor(population) {
     return "#facc15";
 }
 
-// --- Radius (2x böyük) ---
+// --- Radius  ---
 function getRadius(population) {
     const base = 7;
     const scale = Math.sqrt(population) / 220;
@@ -37,7 +40,7 @@ function getRadius(population) {
 }
 
 
-// --- 🔥 Koordinatları avtomatik alma funksiyası ---
+// ---  Koordinatları avtomatik alma funksiyası ---
 async function fetchCoords(cityName) {
     const url = `https://nominatim.openstreetmap.org/search?format=json&q=${cityName}+Azerbaijan`;
 
@@ -56,10 +59,10 @@ async function fetchCoords(cityName) {
 const cityListEl = document.getElementById("city-list");
 
 
-// --- 🔥 Şəhərləri xəritəyə əlavə edən əsas blok ---
+// ---  Şəhərləri xəritəyə əlavə edən əsas blok ---
 cities.forEach(async city => {
 
-    // 👉 Əgər koordinat YOXDURSA — avtomatik tap!
+    // Əgər koordinat YOXDURSA — avtomatik tap!
     if (!city.coords) {
         city.coords = await fetchCoords(city.name);
 
@@ -85,7 +88,7 @@ cities.forEach(async city => {
     );
 
 
-    // 👉 Soldakı siyahıya əlavə et
+    //  Soldakı siyahıya əlavə et
     const li = document.createElement("li");
 
     li.innerHTML = `
