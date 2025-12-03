@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app-header {
+    padding: 12px 24px;
+    background: #111827;
+    color: #f9fafb;
+    border-bottom: 1px solid #1f2933;
+}
+
+.title-block h1 {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.title-block p {
+    font-size: 13px;
+    color: #d1d5db;
+}
+
+.map-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.info-panel {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 280px;
+    max-height: calc(100% - 32px);
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.35);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+}
+
+.info-panel h2 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.info-text {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.legend {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 10px;
+    margin-top: 4px;
+}
+
+.legend h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #4b5563;
+    margin-bottom: 4px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    border: 1px solid #111827;
+}
+
+.legend-high {
+    background: #b91c1c;
+}
+
+.legend-mid {
+    background: #ea580c;
+}
+
+.legend-low {
+    background: #facc15;
+}
+
+.city-list h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-top: 6px;
+}
+
+#city-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#city-list li {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#city-list li span.city-name {
+    font-weight: 600;
+}
+
+#city-list li span.city-pop {
+    color: #6b7280;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+}
+
+.leaflet-popup-content {
+    font-size: 13px;
+}
+
+.leaflet-container {
+    background: #dbeafe;
+}
+
+@media (max-width: 768px) {
+    .info-panel {
+        position: static;
+        width: 100%;
+        max-height: none;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .map-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #map {
+        flex: 1;
+        min-height: 300px;
+    }
+}

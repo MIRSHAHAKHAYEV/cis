@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Azərbaycanın əhalisi üzrə interaktiv xəritə</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <header class="app-header">
+        <div class="title-block">
+            <h1>Azərbaycanın əhalisi üzrə interaktiv xəritə</h1>
+            <p>Leaflet.js ilə əsas şəhərlərin əhali paylanması</p>
+        </div>
+    </header>
+
+    <main class="map-wrapper">
+        <div id="map"></div>
+
+        <aside class="info-panel">
+            <h2>Şəhərlər və əhali</h2>
+            <p class="info-text">
+                Aşağıdakı dairələr şəhərlərin əhalisinə görə radius və rənglə göstərilir.
+            </p>
+
+            <div class="legend">
+                <h3>Əhali legendi</h3>
+                <div class="legend-row">
+                    <span class="legend-color legend-high"></span>
+                    <span>> 1 000 000 nəfər</span>
+                </div>
+                <div class="legend-row">
+                    <span class="legend-color legend-mid"></span>
+                    <span>300 000 – 1 000 000 nəfər</span>
+                </div>
+                <div class="legend-row">
+                    <span class="legend-color legend-low"></span>
+                    <span>< 300 000 nəfər</span>
+                </div>
+            </div>
+
+            <div class="city-list">
+                <h3>Şəhər siyahısı</h3>
+                <ul id="city-list"></ul>
+            </div>
+        </aside>
+    </main>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script src="script.js"></script>
+</body>
+</html>
