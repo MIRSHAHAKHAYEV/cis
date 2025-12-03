@@ -9,6 +9,10 @@ const cities = [
     // ✔ Bu formatda yeni əlavə edə bilərsən (coords YOXDUR ↓)
     // { name: "Sabirabad", population: 110000 }
 ];
+cities.push({
+    name: "Sabirabad",
+    population: 110000
+});
 
 // --- Xəritə yaradılması ---
 const map = L.map("map").setView([40.3, 47.7], 7);
