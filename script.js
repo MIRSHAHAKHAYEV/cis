@@ -17,8 +17,7 @@ const cities = [
     { name: "Masallı", population: 93000, coords: [39.0341, 48.6650] },
     { name: "Cəlilabad", population: 113000, coords: [39.2091, 48.4919] },
     { name: "Salyan", population: 39000, coords: [39.5964, 48.9840] },
-    { name: "Qazax", population: 22000, coords: [41.0922, 45.3650] },
-    { name: "Tovuz", population: 170000, coords: [40.9922, 45.6286] }
+    { name: "Qazax", population: 22000, coords: [41.0922, 45.3650] }
 ];
 
 const map = L.map("map").setView([40.3, 47.7], 7);
