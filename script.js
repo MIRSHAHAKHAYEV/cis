@@ -4,6 +4,10 @@ cities.push({
     name: "Sabirabad",
     population: 110000
 });
+cities.push({
+    name: "Sumqayıt",
+    population: 312000
+});
 
 // --- Xəritə yaradılması ---
 const map = L.map("map").setView([40.3, 47.7], 7);
